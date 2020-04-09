@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% static "images" as baseUrl %}
+
+{% block content %}
+
+{{context}}
+<div class="container-fluid">
+
+	<div class="card">
+	  	<div class="card-header">
+	   <h3>TOP 5 COVID19 NEWS OF INDIA</h3>
+	  	</div>
+		{% for content in content %}
+		
+		<div class="card-body">
+		    <h5 class="card-title">{{content.headline}}</h5>
+		   <!--  <p class="card-text">{{content.intro}}</p> -->
+		    <button href="{{content.link}}" type="button" class="btn btn-outline-secondary">Know More</button>
+		    <br><br>
+		     <div class="card-footer">
+		      <small class="text-muted">{{content.date}}</small>
+		    </div>
+		   
+		</div>
+	  {% endfor %}
+	</div>
+
+		<div class="card">
+	  	<div class="card-header">
+	   <h3>TOP 5 COVID19 NEWS OF AMERICA</h3>
+	  	</div>
+		{% for content in content2 %}
+		
+		<div class="card-body">
+		    <h5 class="card-title">{{content.headline}}</h5>
+		   <!--  <p class="card-text">{{content.intro}}</p> -->
+		    <button onClick="window.location.href='{{content.link}}'" type="button" class="btn btn-outline-secondary">Know More</button>
+		    <br><br>
+		     <div class="card-footer">
+		      <small class="text-muted">{{content.date}}</small>
+		    </div>
+		   
+		</div>
+	  {% endfor %}
+	</div>
+
+</div>
+<style type="text/css">
+	.card-header {
+    background-color: rgba(121, 162, 255, 0.22);
+}
+</style>
+
+
+
+
+{% endblock %}
