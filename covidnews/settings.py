@@ -25,7 +25,7 @@ SECRET_KEY = 'eg$su!@#a_q(k4uponc8yyk1%1mw4$%ak2k+zzom74d&*x08b*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://covid19newstrack.herokuapp.com']
+ALLOWED_HOSTS = ['https://covidnewstrack.herokuapp.com']
 
 
 # Application definition
